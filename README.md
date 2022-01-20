@@ -1,6 +1,6 @@
 # pure-data patches
 
-This is a random collection of puredata patches. I use [purr-data](https://agraef.github.io/purr-data/) for easy setup/indtall. I try to make a `-help` patch for all of them. You can open this directly for an example, or later get a refreshr on how to use it by adding the patch you want to your thing, then right-click and choose "Help".
+This is a random collection of puredata patches. I use [purr-data](https://agraef.github.io/purr-data/) for easy setup/install, which you might need to get all the pd extensions. There is a `-help` patch for all of these. You can open this directly for an example, or later get a refresher on how to use it by adding the patch you want to your thing, then right-click and choosing "Help".
 
 ## scalegen
 
