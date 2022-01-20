@@ -1,0 +1,16 @@
+#N canvas 692 244 450 300 12;
+#X obj 270 60 inlet bpm;
+#X obj 100 240 outlet bangs;
+#X obj 100 190 metro;
+#X obj 100 150 bpm;
+#X obj 180 100 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 170 50 inlet power;
+#X floatatom 230 100 3 1 999 0 bpm - -, f 3;
+#X connect 0 0 6 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X coords 0 -1 1 1 85 44 1 175 81;
