@@ -1,0 +1,4 @@
+#N canvas 829 1248 646 553 12;
+#X obj 60 140 scalegen;
+#X obj 70 460 print note;
+#X connect 0 0 1 0;
