@@ -5,3 +5,7 @@ This is a random collection of puredata patches. I use [purr-data](https://agrae
 ## scalegen
 
 This is a little piano that lets you select a pool of notes, and it will fire them when you send it a trigger. You can use this to make nice random music in scales and things.
+
+## banger
+
+This is just a simple `metro` with bpm on it.
