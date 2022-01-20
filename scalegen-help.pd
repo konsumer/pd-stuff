@@ -1,44 +1,60 @@
-#N canvas 464 52 906 854 12;
+#N canvas 326 42 1169 854 12;
 #X obj 190 250 scalegen;
-#X text 20 210 trigger: send this a bang \, and it will output a note
+#X text 760 300 trigger: send this a bang \, and it will output a note
 ;
-#X obj 180 560 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 65 256 0;
-#X obj 270 70 cnv 15 410 54 empty empty empty 20 12 0 14 #78e3a8 #404040
+#X obj 180 560 nbx 5 14 -1e+37 1e+37 0 0 empty empty note 0 -8 0 10
+#fcfcfc #000000 #000000 51 256 0;
+#X obj 280 20 cnv 15 410 54 empty empty empty 20 12 0 14 #78e3a8 #404040
 0;
-#X text 280 80 scalegen will allow you to pick notes in a scale/octave
+#X text 290 30 scalegen will allow you to pick notes in a scale/octave
 range for making nice random music.;
-#X text 590 180 octave: set the octave-range externally;
-#X text 300 180 octave: set the octave-start externally;
-#X obj 30 110 banger;
-#X obj 380 20 loadbang;
-#X msg 30 80 1;
-#X obj 160 680 mtof;
-#X obj 160 710 phasor~;
-#X obj 150 780 dac~;
+#X obj 140 180 banger;
+#X obj 380 120 loadbang;
+#X msg 140 150 1;
+#X obj 150 710 mtof;
+#X obj 150 740 phasor~;
+#X obj 140 810 dac~;
 #X msg 680 220 1;
-#X obj 220 710 / 127;
-#X obj 160 740 *~;
-#X text 220 520 MIDI note-number comes out here.;
+#X obj 260 720 / 127;
+#X obj 150 770 *~;
+#X text 760 480 MIDI note-number comes out here.;
 #X text 300 670 This is a simple demo instrument.;
-#X msg 430 220 4;
-#X msg 80 80 60;
+#X msg 510 220 4;
+#X text 760 330 notes: set a list of notes;
+#X text 290 170 persian scale;
+#X text 760 270 INLETS:;
+#X text 760 450 OUTLETS:;
+#X text 760 360 octave: set the octave-start;
+#X text 760 390 octave: set the octave-range;
+#X msg 190 150 30;
 #X obj 180 610 makenote 100 1000;
+#X obj 210 780 line;
+#X obj 220 690 select 0;
+#X msg 220 720 0;
+#X msg 260 750 \$1 200;
+#X msg 290 200 1 4 5 6 9 11 12;
 #X connect 0 0 2 0;
-#X connect 2 0 20 0;
-#X connect 7 0 0 0;
-#X connect 8 0 19 0;
+#X connect 2 0 24 0;
+#X connect 5 0 0 0;
+#X connect 6 0 23 0;
+#X connect 6 0 7 0;
+#X connect 6 0 16 0;
+#X connect 6 0 11 0;
+#X connect 6 0 29 0;
+#X connect 7 0 5 0;
 #X connect 8 0 9 0;
-#X connect 8 0 18 0;
-#X connect 8 0 13 0;
-#X connect 9 0 7 0;
-#X connect 10 0 11 0;
-#X connect 11 0 15 0;
-#X connect 13 0 0 2;
-#X connect 14 0 15 1;
-#X connect 15 0 12 0;
-#X connect 15 0 12 1;
-#X connect 18 0 0 1;
-#X connect 19 0 7 1;
-#X connect 20 0 10 0;
-#X connect 20 1 14 0;
+#X connect 9 0 13 0;
+#X connect 11 0 0 3;
+#X connect 12 0 28 0;
+#X connect 13 0 10 0;
+#X connect 13 0 10 1;
+#X connect 16 0 0 2;
+#X connect 23 0 5 1;
+#X connect 24 0 8 0;
+#X connect 24 1 26 0;
+#X connect 25 0 13 1;
+#X connect 26 0 27 0;
+#X connect 26 1 12 0;
+#X connect 27 0 25 0;
+#X connect 28 0 25 0;
+#X connect 29 0 0 1;
