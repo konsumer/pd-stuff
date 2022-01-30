@@ -1,2 +1,48 @@
-#N canvas 2425 737 450 300 12;
-#X obj 55 60 ladspa/analogue;
+#N canvas 1730 559 1425 1351 12;
+#X obj 245 840 ladspa/amPitchshift pitch;
+#X obj 55 470 scalegen;
+#X obj 75 390 banger;
+#X obj 135 755 mtof;
+#X obj 160 805 phasor~;
+#X obj 260 1075 output~;
+#X obj 715 470 numpat;
+#X obj 715 440 % 16;
+#X msg 715 680 \; pitch/control/1 \$1;
+#X obj 130 930 ladspa/retroFlange flange;
+#X obj 740 770 hsl 128 15 0 127 0 1 flange/control/1 empty empty -2
+-8 0 10 #fcfcfc #000000 #000000 4500 1;
+#X obj 740 795 hsl 128 15 0 127 0 1 flange/control/2 empty empty -2
+-8 0 10 #fcfcfc #000000 #000000 7100 1;
+#X obj 205 235 loadbang;
+#X obj 745 835 hsl 128 15 0 127 0 1 reverb/control/1 empty empty -2
+-8 0 10 #fcfcfc #000000 #000000 7750 1;
+#X obj 745 860 hsl 128 15 0 127 0 1 reverb/control/3 empty empty -2
+-8 0 10 #fcfcfc #000000 #000000 5500 1;
+#X msg 260 330 \; pitch/control/2 64;
+#X msg 1005 410 18 0 31 0 0 0 20 10 0 0 46 0 0 57 0 0;
+#X obj 265 790 *~;
+#X obj 295 750 tgl 23 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X msg 205 340 60;
+#X obj 345 790 line;
+#X msg 345 760 \$1 100;
+#X connect 0 1 5 1;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 0 18 0;
+#X connect 2 4 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 17 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 9 0 5 0;
+#X connect 12 0 19 0;
+#X connect 12 0 15 0;
+#X connect 12 0 16 0;
+#X connect 16 0 6 1;
+#X connect 17 0 0 0;
+#X connect 17 0 9 0;
+#X connect 18 0 21 0;
+#X connect 19 0 2 1;
+#X connect 20 0 17 1;
+#X connect 21 0 20 0;
