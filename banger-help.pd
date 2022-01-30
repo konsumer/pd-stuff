@@ -1,17 +1,35 @@
-#N canvas 581 205 644 449 12;
+#N canvas 710 620 1118 756 12;
 #X obj 160 10 cnv 15 343 39 empty empty empty 20 12 0 14 #78e3a8 #404040
 0;
 #X text 170 20 banger is basically a metro with a nicer setup;
 #X obj 170 220 banger;
 #X obj 190 80 loadbang;
-#X msg 250 160 120;
 #X text 270 200 input BPM here;
 #X text 10 190 input power (1/0) here;
-#X obj 170 310 tgl 46 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
 #X msg 210 160 1;
-#X connect 2 0 7 0;
-#X connect 3 0 4 0;
-#X connect 3 0 8 0;
-#X connect 4 0 2 1;
-#X connect 8 0 2 0;
+#X text 517 262 INLETS:;
+#X text 527 407 OUTLETS:;
+#X text 517 295 power: 0/1 = off/on;
+#X text 517 325 bpm: float;
+#X text 527 488 phasor time: float;
+#X text 527 435 trigger: bang;
+#X text 527 458 metro time: float;
+#X text 527 517 power: float (0/1 for status of toggle);
+#X text 527 547 step: incrementing number;
+#X floatatom 210 345 5 0 0 2 phasor - -, f 5;
+#X floatatom 160 345 5 0 0 2 metro - -, f 5;
+#X obj 105 335 bng 33 50 10 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 250 160 60;
+#X obj 260 335 tgl 32 0 empty empty power 0 -10 0 10 #fcfcfc #000000
+#000000 0 1;
+#X floatatom 310 345 5 0 0 2 step - -, f 5;
+#X connect 2 0 18 0;
+#X connect 2 1 17 0;
+#X connect 2 2 16 0;
+#X connect 2 3 20 0;
+#X connect 2 4 21 0;
+#X connect 3 0 19 0;
+#X connect 3 0 6 0;
+#X connect 6 0 2 0;
+#X connect 19 0 2 1;

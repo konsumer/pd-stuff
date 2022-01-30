@@ -1,0 +1,31 @@
+#N canvas 4164 155 959 667 12;
+#X obj 270 15 cnv 15 410 54 empty empty empty 20 12 0 14 #78e3a8 #404040
+0;
+#X text 485 355 INLETS:;
+#X text 485 385 step: give it a number 0-16;
+#X obj 105 150 banger;
+#X obj 365 140 loadbang;
+#X msg 110 105 1;
+#X msg 160 105 30;
+#X obj 175 215 % 16;
+#X text 485 415 pattern: give it a a list of values 0-127 (16 numbers
+long);
+#X text 495 500 OUTLETS:;
+#X obj 105 315 indicator;
+#X obj 110 380 trigpat;
+#X obj 110 450 bng 117 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 495 525 bang trigger;
+#X text 280 25 trigpat will allow you to step-sequence a series of
+bangs. Uncheck the tick to turn off that beat., f 55;
+#X msg 465 315 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0;
+#X connect 3 4 7 0;
+#X connect 4 0 6 0;
+#X connect 4 0 5 0;
+#X connect 4 0 15 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 1;
+#X connect 7 0 10 0;
+#X connect 7 0 11 0;
+#X connect 11 0 12 0;
+#X connect 15 0 11 1;

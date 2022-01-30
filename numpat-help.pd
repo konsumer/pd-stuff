@@ -1,0 +1,30 @@
+#N canvas 1301 860 959 667 12;
+#X obj 270 15 cnv 15 410 54 empty empty empty 20 12 0 14 #78e3a8 #404040
+0;
+#X text 485 355 INLETS:;
+#X text 485 385 step: give it a number 0-16;
+#X obj 105 150 banger;
+#X obj 275 100 loadbang;
+#X msg 110 105 1;
+#X msg 160 105 30;
+#X text 280 25 numpat will allow you to step-sequence a series of numbers.
+Uncheck the tick to turn off that beat., f 55;
+#X obj 110 380 numpat;
+#X text 485 415 pattern: give it a a list of values 0-127 (16 numbers
+long);
+#X text 495 500 OUTLETS:;
+#X text 495 525 The current value;
+#X floatatom 95 605 5 0 0 0 - - -, f 5;
+#X obj 110 310 indicator;
+#X msg 480 295 64 0 0 0 20 0 0 0 35 0 0 0 80 0 0 0;
+#X obj 165 230 % 16;
+#X connect 3 4 15 0;
+#X connect 4 0 6 0;
+#X connect 4 0 5 0;
+#X connect 4 0 14 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 1;
+#X connect 8 0 12 0;
+#X connect 14 0 8 1;
+#X connect 15 0 13 0;
+#X connect 15 0 8 0;
