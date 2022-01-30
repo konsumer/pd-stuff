@@ -1,0 +1,23 @@
+
+#N canvas 381 276 546 300 10;
+#X obj -288 214 plugin~ tracker_gaaadaia_oa;
+#N canvas 3 26 450 300 controls 0;
+#X obj -3 227 outlet;
+#X restore -288 189 pd controls;
+#X obj -250 132 inlet~ Gate;
+#X connect 2 0 0 1;
+#X obj -150 132 inlet~ Attack Rate (Hz) when Gate High;
+#X connect 3 0 0 2;
+#X obj -50 132 inlet~ Decay Rate (Hz) when Gate High;
+#X connect 4 0 0 3;
+#X obj 50 132 inlet~ Attack Rate (Hz) when Gate Low;
+#X connect 5 0 0 4;
+#X obj 150 132 inlet~ Decay Rate (Hz) when Gate Low;
+#X connect 6 0 0 5;
+#X obj 250 132 inlet~ Input;
+#X connect 7 0 0 6;
+#X obj -250 300 outlet~ Output;
+#X connect 0 1 8 0;
+
+#X connect 1 0 0 0;
+#X coords 0 -1 1 1 137 12 1 100 100;

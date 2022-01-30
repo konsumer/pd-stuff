@@ -1,0 +1,42 @@
+
+#N canvas 381 276 546 300 10;
+#X obj -288 214 plugin~ Ambisonics-21-rotator;
+#N canvas 3 26 450 300 controls 0;
+#X obj -3 227 outlet;#X obj 130 0 r \$0/control/1;
+#X obj 130 20 / 127;
+#X obj 130 40 hid/notescale 180.000000 180.000000;
+#X msg 130 60 control #1 \$1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+
+#X restore -288 189 pd controls;
+#X obj 105 117 hsl 126 15 0 126 0 0 \$0/control/1 \$1/control/1 Angle 0 8 0 10 -260097 -1 -1 0 1;
+#X obj -250 132 inlet~ In-W;
+#X connect 3 0 0 1;
+#X obj -150 132 inlet~ In-X;
+#X connect 4 0 0 2;
+#X obj -50 132 inlet~ In-Y;
+#X connect 5 0 0 3;
+#X obj 50 132 inlet~ In-U;
+#X connect 6 0 0 4;
+#X obj 150 132 inlet~ In-V;
+#X connect 7 0 0 5;
+#X obj 250 132 inlet~ In-Z;
+#X connect 8 0 0 6;
+#X obj -250 300 outlet~ Out-W;
+#X connect 0 1 9 0;
+#X obj -150 300 outlet~ Out-X;
+#X connect 0 2 10 0;
+#X obj -50 300 outlet~ Out-Y;
+#X connect 0 3 11 0;
+#X obj 50 300 outlet~ Out-U;
+#X connect 0 4 12 0;
+#X obj 150 300 outlet~ Out-V;
+#X connect 0 5 13 0;
+#X obj 250 300 outlet~ Out-Z;
+#X connect 0 6 14 0;
+
+#X connect 1 0 0 0;
+#X coords 0 -1 1 1 137 32 1 100 100;

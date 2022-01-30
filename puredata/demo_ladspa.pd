@@ -1,0 +1,2 @@
+#N canvas 2425 737 450 300 12;
+#X obj 55 60 ladspa/analogue;

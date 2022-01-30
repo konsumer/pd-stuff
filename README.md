@@ -22,3 +22,16 @@ A step-sequencer for a series of numbers
 ## trigpat
 
 A step-sequencer for a series of bangs.
+
+
+## wrap_ladspa.py
+
+This is a little script to automate wrapping all your ladspa plugins with puredata patches, to make them easier to use. It will add a little GUI and in/outs for controls/audio. You will need `ladspa-sdk` installed, and should have `listplugiuns` in your path. If you run it, you should see a hige list. If not, you might need to do this first:
+
+```
+export LADSPA_PATH=/usr/lib/ladspa
+```
+
+I included my plugins, but you probably want to generate all the wrappers for yourself. Not all of them work, so you will probably have to tune them, but this should help you get started.
+
+You can see demo_ladspa.pd to see what it looks like.

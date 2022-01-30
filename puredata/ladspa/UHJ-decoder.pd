@@ -1,0 +1,21 @@
+
+#N canvas 381 276 546 300 10;
+#X obj -288 214 plugin~ UHJ-decoder;
+#N canvas 3 26 450 300 controls 0;
+#X obj -3 227 outlet;
+#X restore -288 189 pd controls;
+#X obj -250 132 inlet~ In-L;
+#X connect 2 0 0 1;
+#X obj -150 132 inlet~ In-R;
+#X connect 3 0 0 2;
+#X obj -250 300 outlet~ Out-W;
+#X connect 0 1 4 0;
+#X obj -150 300 outlet~ Out-X;
+#X connect 0 2 5 0;
+#X obj -50 300 outlet~ Out-Y;
+#X connect 0 3 6 0;
+#X obj 50 300 outlet~ Out-Z;
+#X connect 0 4 7 0;
+
+#X connect 1 0 0 0;
+#X coords 0 -1 1 1 137 12 1 100 100;
