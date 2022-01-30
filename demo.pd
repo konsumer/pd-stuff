@@ -1,119 +1,119 @@
-#N canvas 849 207 2325 1548 12;
-#X obj 285 110 banger;
-#X msg 285 70 1;
-#X obj 290 45 loadbang;
-#X obj 400 105 % 16;
-#X obj 280 330 trigpat;
-#X obj 280 275 indicator;
-#X obj 275 400 scalegen;
-#X text 615 330 persian scale;
-#X msg 615 360 1 4 5 6 9 11 12;
-#X obj 750 285 loadbang;
-#X obj 575 730 bassemu~;
-#X obj 575 790 output~;
-#X text 786 435 CutOff;
-#X text 840 435 Reso;
-#X text 879 435 EnvMod;
-#X text 929 435 Decay;
-#X obj 1031 451 vsl 25 128 0 127 0 1 empty empty empty 0 -8 0 8 #fcfcfc
+#N canvas 1229 391 1793 1288 12;
+#X obj 730 620 banger;
+#X msg 730 580 1;
+#X obj 735 555 loadbang;
+#X obj 845 615 % 16;
+#X obj 125 150 trigpat;
+#X obj 125 95 indicator;
+#X obj 120 220 scalegen;
+#X text 460 150 persian scale;
+#X msg 460 180 1 4 5 6 9 11 12;
+#X obj 595 105 loadbang;
+#X obj 420 550 bassemu~;
+#X obj 420 610 output~;
+#X text 631 255 CutOff;
+#X text 685 255 Reso;
+#X text 724 255 EnvMod;
+#X text 774 255 Decay;
+#X obj 876 271 vsl 25 128 0 127 0 1 empty empty empty 0 -8 0 8 #fcfcfc
 #000000 #000000 8500 1;
-#X msg 1031 607 glide \$1;
-#X text 1025 436 Glide;
-#X obj 800 450 vsl 25 128 -1 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
+#X msg 870 440 glide \$1;
+#X text 870 256 Glide;
+#X obj 645 270 vsl 25 128 -1 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
 #000000 #000000 2225 1;
-#X obj 846 450 vsl 25 128 -1 2 0 1 empty empty empty 0 -8 0 8 #fcfcfc
+#X obj 691 270 vsl 25 128 -1 2 0 1 empty empty empty 0 -8 0 8 #fcfcfc
 #000000 #000000 5400 1;
-#X obj 892 450 vsl 25 128 -1 2 0 1 empty empty empty 0 -8 0 8 #fcfcfc
+#X obj 737 270 vsl 25 128 -1 2 0 1 empty empty empty 0 -8 0 8 #fcfcfc
 #000000 #000000 7297 1;
-#X obj 938 450 vsl 25 128 -1 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
+#X obj 783 270 vsl 25 128 -1 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
 #000000 #000000 4485 1;
-#X obj 984 450 vsl 25 128 0 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
+#X obj 829 270 vsl 25 128 0 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
 #000000 #000000 4550 1;
-#X msg 800 590 cutoff \$1;
-#X msg 846 610 reso \$1;
-#X obj 892 646 s bass_ctl;
-#X msg 892 586 envmod \$1;
-#X msg 938 606 decay \$1;
-#X msg 984 586 pw \$1;
-#X text 982 425 Rect;
-#X text 979 435 Width;
-#X obj 1031 586 / 127;
-#X obj 590 680 r bass_ctl;
-#X obj 690 700 loadbang;
-#X obj 300 815 s bass_ctl;
-#X obj 1110 230 trigpat;
-#X obj 1105 300 scalegen;
-#X text 1445 230 persian scale;
-#X msg 1445 260 1 4 5 6 9 11 12;
-#X msg 1620 260 1;
-#X msg 1570 260 4;
-#X obj 1670 215 loadbang;
-#X msg 1410 175 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0;
-#X msg 740 360 2;
-#X obj 840 1120 output~;
-#X obj 1005 1045 loadbang;
-#X obj 830 1070 fluid~ -smmf TimGM6mb;
-#X msg 1105 620 \$3 \$1 \$2;
-#X obj 1105 595 pack 0 0 0;
-#X obj 1280 590 nbx 5 14 0 127 0 1 empty empty instrument 0 -8 0 10
+#X msg 645 410 cutoff \$1;
+#X msg 691 430 reso \$1;
+#X obj 737 466 s bass_ctl;
+#X msg 737 406 envmod \$1;
+#X msg 783 426 decay \$1;
+#X msg 829 406 pw \$1;
+#X text 827 245 Rect;
+#X text 824 255 Width;
+#X obj 876 406 / 127;
+#X obj 435 500 r bass_ctl;
+#X obj 535 520 loadbang;
+#X obj 145 635 s bass_ctl;
+#X obj 1025 160 trigpat;
+#X obj 1020 230 scalegen;
+#X text 1360 160 persian scale;
+#X msg 1360 190 1 4 5 6 9 11 12;
+#X msg 1535 190 1;
+#X msg 1485 190 4;
+#X obj 1585 145 loadbang;
+#X msg 1325 105 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0;
+#X msg 585 180 2;
+#X obj 685 970 output~;
+#X obj 850 895 loadbang;
+#X obj 675 920 fluid~ -smmf TimGM6mb;
+#X msg 1020 550 \$3 \$1 \$2;
+#X obj 1020 525 pack 0 0 0;
+#X obj 1195 520 nbx 5 14 0 127 0 1 empty empty instrument 0 -8 0 10
 #fcfcfc #000000 #000000 1 256 0;
-#X msg 1005 1095 1;
-#X msg 690 750 0.7;
-#X obj 285 920 trigpat;
-#X obj 280 990 scalegen;
-#X text 620 920 persian scale;
-#X msg 620 950 1 4 5 6 9 11 12;
-#X msg 795 950 1;
-#X msg 745 950 4;
-#X obj 280 1255 makenote 100 100, f 19;
-#X obj 845 905 loadbang;
-#X msg 280 1310 \$3 \$1 \$2;
-#X obj 280 1285 pack 0 0 0;
-#X obj 455 1280 nbx 5 14 0 127 0 1 empty empty instrument 0 -8 0 10
+#X msg 850 945 1;
+#X msg 535 570 0.7;
+#X obj 130 770 trigpat;
+#X obj 125 840 scalegen;
+#X text 465 770 persian scale;
+#X msg 465 800 1 4 5 6 9 11 12;
+#X msg 640 800 1;
+#X msg 590 800 4;
+#X obj 125 1105 makenote 100 100, f 19;
+#X obj 690 755 loadbang;
+#X msg 125 1160 \$3 \$1 \$2;
+#X obj 125 1135 pack 0 0 0;
+#X obj 300 1130 nbx 5 14 0 127 0 1 empty empty instrument 0 -8 0 10
 #fcfcfc #000000 #000000 10 256 0;
-#X obj 825 1030 r \$0-soundfont;
-#X obj 1105 645 s \$0-soundfont;
-#X obj 280 1345 s \$0-soundfont;
-#X msg 615 880 1 0 1 0 1 1 0 1 1 1 0 1 1 0 1 1;
-#X obj 280 890 r \$0-step;
-#X obj 180 260 r \$0-step;
-#X obj 1110 200 r \$0-step;
-#X obj 400 135 s \$0-step;
-#X obj 1145 865 s \$0-soundfont;
-#X msg 1145 840 10 42 100;
-#X text 1100 790 CHH;
-#X obj 1150 1035 s \$0-soundfont;
-#X text 1090 930 KICK;
-#X msg 1150 1010 10 36 100;
-#X obj 1150 1205 s \$0-soundfont;
-#X text 1085 1110 SNARE;
-#X msg 1150 1180 10 38 100;
-#X obj 325 710 pack 0 0;
-#X obj 325 740 route 0;
-#X msg 260 770 -1;
-#X obj 275 665 makenote 100 2000, f 19;
-#X msg 700 240 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0;
-#X msg 355 775 \$2;
-#X msg 790 360 2;
-#X obj 1105 565 makenote 100 1000, f 19;
-#X obj 1145 750 r \$0-step;
-#X obj 1145 780 trigpat;
-#X obj 1150 920 r \$0-step;
-#X obj 1150 950 trigpat;
-#X obj 1150 1090 r \$0-step;
-#X obj 1150 1120 trigpat;
-#X msg 1515 775 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0;
-#X msg 1510 910 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0;
-#X msg 1515 1095 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0;
-#X obj 1805 905 loadbang;
-#X msg 326 72 60, f 5;
-#X obj 280 220 cnv 15 403 38 empty empty BASS 20 12 0 16 #fffe00 #404040
+#X obj 670 880 r \$0-soundfont;
+#X obj 1020 580 s \$0-soundfont;
+#X obj 125 1195 s \$0-soundfont;
+#X msg 460 730 1 0 1 0 1 1 0 1 1 1 0 1 1 0 1 1;
+#X obj 125 740 r \$0-step;
+#X obj 25 80 r \$0-step;
+#X obj 1025 130 r \$0-step;
+#X obj 845 645 s \$0-step;
+#X obj 1035 870 s \$0-soundfont;
+#X msg 1035 845 10 42 100;
+#X text 990 795 CHH;
+#X obj 1040 1040 s \$0-soundfont;
+#X text 980 935 KICK;
+#X msg 1040 1015 10 36 100;
+#X obj 1040 1210 s \$0-soundfont;
+#X text 975 1115 SNARE;
+#X msg 1040 1185 10 38 100;
+#X obj 170 530 pack 0 0;
+#X obj 170 560 route 0;
+#X msg 105 590 -1;
+#X obj 120 485 makenote 100 2000, f 19;
+#X msg 545 60 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0;
+#X msg 200 595 \$2;
+#X msg 635 180 2;
+#X obj 1020 495 makenote 100 1000, f 19;
+#X obj 1035 755 r \$0-step;
+#X obj 1035 785 trigpat;
+#X obj 1040 925 r \$0-step;
+#X obj 1040 955 trigpat;
+#X obj 1040 1095 r \$0-step;
+#X obj 1040 1125 trigpat;
+#X msg 1405 780 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0;
+#X msg 1400 915 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0;
+#X msg 1405 1100 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0;
+#X obj 1700 865 loadbang;
+#X msg 771 582 60, f 5;
+#X obj 125 40 cnv 15 403 38 empty empty BASS 20 12 0 16 #fffe00 #404040
 0;
-#X obj 1100 130 cnv 15 403 38 empty empty PIANO 19 12 0 16 #fffe00
-#404040 0;
-#X obj 275 845 cnv 15 403 38 empty empty RANDOM\ PERCUSSION 19 12 0
+#X obj 1015 60 cnv 15 403 38 empty empty PIANO 19 12 0 16 #fffe00 #404040
+0;
+#X obj 120 695 cnv 15 403 38 empty empty RANDOM\ PERCUSSION 19 12 0
 16 #fffe00 #404040 0;
-#X obj 1140 700 cnv 15 403 38 empty empty STEP\ PERCUSSION 19 12 0
+#X obj 1030 705 cnv 15 403 38 empty empty STEP\ PERCUSSION 19 12 0
 16 #fffe00 #404040 0;
 #X connect 0 4 3 0;
 #X connect 1 0 0 0;
