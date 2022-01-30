@@ -8,9 +8,9 @@ This is a little piano that lets you select a pool of notes, and it will fire th
 
 ## banger
 
-This is just a simple `metro` with bpm on it.
+This is just a simple `metro` with bpm on it. It has all the stuff I end up re-creating all the time (step counter, time-conversion, etc.)
 
-## indicatator
+## indicator
 
 This just indicates current step.
 
