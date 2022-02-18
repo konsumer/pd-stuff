@@ -1,0 +1,26 @@
+#N canvas 437 230 730 443 12;
+#X obj 53 35 joy-ps4;
+#X obj 99 168 tgl 20 0 empty bLEFT empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 141 167 tgl 20 0 empty bRIGHT empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 121 148 tgl 20 0 empty bUP empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 120 188 tgl 20 0 empty bDOWN empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 201 146 tgl 20 0 empty bX X 5 10 0 15 #fcfcfc #000000 #000000
+0 1;
+#X obj 181 167 tgl 20 0 empty bY Y 5 10 0 15 #fcfcfc #000000 #000000
+0 1;
+#X obj 221 166 tgl 20 0 empty bA A 5 10 0 15 #fcfcfc #000000 #000000
+0 1;
+#X obj 201 187 tgl 20 0 empty bB B 5 10 0 15 #fcfcfc #000000 #000000
+0 1;
+#X obj 81 116 tgl 20 0 empty bL L 5 10 0 15 #fcfcfc #000000 #000000
+0 1;
+#X obj 243 118 tgl 20 0 empty bR R 5 10 0 15 #fcfcfc #000000 #000000
+0 1;
+#X obj 138 221 tgl 20 0 empty bSELECT SELECT -5 10 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 180 221 tgl 20 0 empty bSTART START -5 10 0 10 #fcfcfc #000000
+#000000 0 1;

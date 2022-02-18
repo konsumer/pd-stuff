@@ -1,0 +1,55 @@
+#N canvas 674 262 778 468 12;
+#X obj 215 30 notein;
+#X obj 212 71 pack 0 0;
+#X obj 400 220 *~;
+#X obj 390 305 dac~;
+#X obj 445 190 hsl 128 15 0 1 0 1 empty empty volume -2 -8 0 10 #fcfcfc
+#000000 #000000 7300 1;
+#X obj 455 40 loadbang;
+#X msg 455 70 \; pd dsp 1;
+#N canvas 734 197 907 566 instr 0;
+#X restore 125 40 pd instr;
+#N canvas 1357 568 451 326 dynamic 0;
+#X obj 40 15 inlet;
+#X text 100 10 This will build a patch using the named input;
+#X msg 40 65 \; pd-instr clear \; pd-instr obj 55 155 \$1 1 \; pd-instr
+obj 125 70 pack 0 0 0 \; pd-instr obj 125 45 poly 8 \; pd-instr obj
+125 95 route 1 2 3 4 5 6 7 8 \; pd-instr obj 125 20 r note \; pd-instr
+obj 285 95 r control \; pd-instr obj 200 225 s~ sound \; pd-instr obj
+115 155 \$1 2 \; pd-instr obj 170 155 \$1 3 \; pd-instr obj 225 155
+\$1 4 \; pd-instr obj 275 155 \$1 5 \; pd-instr obj 335 155 \$1 6 \;
+pd-instr obj 385 155 \$1 7 \; pd-instr obj 445 155 \$1 8 \; pd-instr
+connect 0 0 6 0 \; pd-instr connect 1 0 3 0 \; pd-instr connect 2 0
+1 0 \; pd-instr connect 2 1 1 1 \; pd-instr connect 2 2 1 2 \; pd-instr
+connect 3 0 0 0 \; pd-instr connect 3 1 7 0 \; pd-instr connect 3 2
+8 0 \; pd-instr connect 3 3 9 0 \; pd-instr connect 3 4 10 0 \; pd-instr
+connect 3 5 11 0 \; pd-instr connect 3 6 12 0 \; pd-instr connect 3
+7 13 0 \; pd-instr connect 4 0 2 0 \; pd-instr connect 5 0 0 1 \; pd-instr
+connect 5 0 7 1 \; pd-instr connect 5 0 8 1 \; pd-instr connect 5 0
+9 1 \; pd-instr connect 5 0 10 1 \; pd-instr connect 5 0 11 1 \; pd-instr
+connect 5 0 12 1 \; pd-instr connect 5 0 13 1 \; pd-instr connect 7
+0 6 0 \; pd-instr connect 8 0 6 0 \; pd-instr connect 9 0 6 0 \; pd-instr
+connect 10 0 6 0 \; pd-instr connect 11 0 6 0 \; pd-instr connect 12
+0 6 0 \; pd-instr connect 13 0 6 0 \;;
+#X connect 0 0 2 0;
+#X restore 75 255 pd dynamic;
+#X obj 310 35 ctlin;
+#X obj 301 78 pack 0 0;
+#X obj 210 105 s note;
+#X obj 300 105 s control;
+#X obj 370 160 r~ sound;
+#X msg 75 210 symbol instrument_sin;
+#X msg 75 175 symbol instrument_saw;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 1 0 11 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 2 1;
+#X connect 5 0 6 0;
+#X connect 9 0 10 1;
+#X connect 9 1 10 0;
+#X connect 10 0 12 0;
+#X connect 13 0 2 0;
+#X connect 14 0 8 0;
+#X connect 15 0 8 0;
