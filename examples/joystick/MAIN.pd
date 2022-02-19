@@ -1,5 +1,4 @@
-#N canvas 437 230 730 443 12;
-#X obj 53 35 joy-ps4;
+#N canvas 402 119 730 588 12;
 #X obj 99 168 tgl 20 0 empty bLEFT empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 141 167 tgl 20 0 empty bRIGHT empty 17 7 0 10 #fcfcfc #000000
@@ -24,3 +23,18 @@
 #000000 0 1;
 #X obj 180 221 tgl 20 0 empty bSTART START -5 10 0 10 #fcfcfc #000000
 #000000 0 1;
+#X obj 135 300 > 0;
+#X obj 185 305 > 0;
+#X obj 160 335 &;
+#X obj 180 260 t b f;
+#X msg 160 390 \; pd quit \;;
+#X text 80 455 exit when START + SELECT are pressed;
+#X obj 160 365 select 1;
+#X connect 10 0 12 0;
+#X connect 11 0 15 0;
+#X connect 12 0 14 0;
+#X connect 13 0 14 1;
+#X connect 14 0 18 0;
+#X connect 15 0 12 0;
+#X connect 15 1 13 0;
+#X connect 18 0 16 0;
