@@ -1,0 +1,22 @@
+#N canvas 595 237 547 357 12;
+#X obj 120 130 inlet~;
+#X obj 120 160 tabwrite~ \$0-oscope;
+#X obj 190 130 metro 100;
+#X obj 190 70 loadbang;
+#X msg 190 100 1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0-oscope 181 float 4 black #ff2700;
+#X coords 0 1 180 -1 133 70 1;
+#X restore 270 100 graph;
+#X msg 270 240 resize \$1;
+#X obj 270 270 s \$0-oscope;
+#X obj 270 180 hsl 128 15 44 44100 1 1 empty empty empty -2 -8 0 10
+#fcfcfc #000000 #000000 2600 1;
+#X connect 0 0 1 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X coords 0 -1 1 1 139 110 2 267 92;
+#X scroll 1;
