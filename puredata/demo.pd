@@ -1,8 +1,8 @@
-#N canvas 1641 311 1793 1478 12;
-#X obj 730 620 banger;
-#X msg 730 580 1;
-#X obj 735 555 loadbang;
-#X obj 810 675 % 16;
+#N canvas 447 117 1793 1478 12;
+#X obj 1580 565 banger;
+#X msg 1580 525 1;
+#X obj 1585 500 loadbang;
+#X obj 1660 620 % 16;
 #X obj 125 150 trigpat;
 #X obj 125 95 indicator;
 #X obj 120 220 scalegen;
@@ -16,17 +16,17 @@
 #X text 724 255 EnvMod;
 #X text 774 255 Decay;
 #X obj 876 271 vsl 25 128 0 127 0 1 empty empty empty 0 -8 0 8 #fcfcfc
-#000000 #000000 8500 1;
+#000000 #000000 2300 1;
 #X msg 870 440 glide \$1;
 #X text 870 256 Glide;
 #X obj 645 270 vsl 25 128 -1 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
-#000000 #000000 5525 1;
+#000000 #000000 625 1;
 #X obj 691 270 vsl 25 128 -1 2 0 1 empty empty empty 0 -8 0 8 #fcfcfc
-#000000 #000000 6800 1;
+#000000 #000000 8000 1;
 #X obj 737 270 vsl 25 128 -1 2 0 1 empty empty empty 0 -8 0 8 #fcfcfc
-#000000 #000000 7297 1;
+#000000 #000000 7497 1;
 #X obj 783 270 vsl 25 128 -1 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 5300 1;
 #X obj 829 270 vsl 25 128 0 1 0 1 empty empty empty 0 -8 0 8 #fcfcfc
 #000000 #000000 4550 1;
 #X msg 645 410 cutoff \$1;
@@ -50,7 +50,7 @@
 #X obj 1585 145 loadbang;
 #X msg 1325 105 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0;
 #X msg 585 180 2;
-#X obj 685 970 output~;
+#X obj 700 1010 output~;
 #X obj 850 895 loadbang;
 #X msg 1020 550 \$3 \$1 \$2;
 #X obj 1020 525 pack 0 0 0;
@@ -76,7 +76,7 @@
 #X obj 125 740 r \$0-step;
 #X obj 25 80 r \$0-step;
 #X obj 1025 130 r \$0-step;
-#X obj 810 705 s \$0-step;
+#X obj 1660 650 s \$0-step;
 #X obj 1035 870 s \$0-soundfont;
 #X text 990 795 CHH;
 #X obj 1045 1045 s \$0-soundfont;
@@ -101,7 +101,7 @@
 #X msg 1400 915 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0;
 #X msg 1405 1100 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0;
 #X obj 1700 865 loadbang;
-#X msg 771 582 60, f 5;
+#X msg 1621 527 60, f 5;
 #X obj 125 40 cnv 15 403 38 empty empty BASS 20 12 0 16 #fffe00 #404040
 0;
 #X obj 1015 60 cnv 15 403 38 empty empty PIANO 19 12 0 16 #fffe00 #404040
@@ -110,7 +110,7 @@
 16 #fffe00 #404040 0;
 #X obj 1030 705 cnv 15 403 38 empty empty STEP\ PERCUSSION 19 12 0
 16 #fffe00 #404040 0;
-#X obj 675 920 fluid~ TimGM6mb;
+#X obj 675 920 fluid~ TimGM6mb, f 16;
 #X text 1170 1350 This is another stlye of sequencing \, using just
 math;
 #X obj 1040 1410 s \$0-soundfont;
@@ -123,17 +123,21 @@ math;
 #X obj 1200 555 nbx 5 14 0 127 0 1 empty empty volume 0 -8 0 10 #fcfcfc
 #000000 #000000 60 256 0;
 #X obj 305 1170 nbx 5 14 0 127 0 1 empty empty volume 0 -8 0 10 #fcfcfc
-#000000 #000000 69 256 0;
+#000000 #000000 70 256 0;
 #X obj 1160 855 nbx 5 14 0 127 0 1 empty empty volume 0 -8 0 10 #fcfcfc
 #000000 #000000 100 256 0;
 #X obj 1150 1020 nbx 5 14 0 127 0 1 empty empty volume 0 -8 0 10 #fcfcfc
-#000000 #000000 127 256 0;
+#000000 #000000 88 256 0;
 #X obj 1130 1200 nbx 5 14 0 127 0 1 empty empty volume 0 -8 0 10 #fcfcfc
-#000000 #000000 80 256 0;
+#000000 #000000 92 256 0;
 #X msg 1045 1200 10 38 \$1;
 #X msg 1045 1020 10 36 \$1;
 #X msg 1035 845 10 42 \$1;
-#X msg 535 570 0.5;
+#X obj 670 560 oscope;
+#X obj 670 1090 oscope;
+#X obj 680 970 *~ 2;
+#X obj 740 970 *~ 2;
+#X msg 535 570 0.75;
 #X connect 0 4 3 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -148,6 +152,7 @@ math;
 #X connect 9 0 80 0;
 #X connect 10 0 11 0;
 #X connect 10 0 11 1;
+#X connect 10 0 116 0;
 #X connect 16 0 32 0;
 #X connect 17 0 26 0;
 #X connect 19 0 24 0;
@@ -162,7 +167,7 @@ math;
 #X connect 29 0 26 0;
 #X connect 32 0 17 0;
 #X connect 33 0 10 0;
-#X connect 34 0 116 0;
+#X connect 34 0 120 0;
 #X connect 36 0 37 0;
 #X connect 37 0 83 0;
 #X connect 39 0 37 1;
@@ -223,8 +228,8 @@ math;
 #X connect 93 0 91 0;
 #X connect 93 0 92 0;
 #X connect 94 0 0 1;
-#X connect 99 0 45 0;
-#X connect 99 1 45 1;
+#X connect 99 0 118 0;
+#X connect 99 1 119 0;
 #X connect 102 0 106 0;
 #X connect 103 0 104 0;
 #X connect 104 0 101 0;
@@ -238,4 +243,7 @@ math;
 #X connect 113 0 74 0;
 #X connect 114 0 72 0;
 #X connect 115 0 70 0;
-#X connect 116 0 11 2;
+#X connect 118 0 117 0;
+#X connect 118 0 45 0;
+#X connect 119 0 45 1;
+#X connect 120 0 11 2;
