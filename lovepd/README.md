@@ -15,3 +15,4 @@ Spawning an instamce of fluidsynth CLI or binding to libfluidsynth might work be
 
 - [sockets](https://fluid-dev.nongnu.narkive.com/ovSZ8tNW/how-to-send-manual-midi-commands-to-fluidsynth-from-another-program)
 - [c program](https://forums.raspberrypi.com/viewtopic.php?t=235717)
+- [pyhton-based bank manager](https://geekfunklabs.com/2020/06/10/headless-pi-synth/)
