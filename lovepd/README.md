@@ -11,6 +11,6 @@ The love program will wait for a connection before opening.
 
 ## note
 
-Spawning an instamce of cluidsyh or binding to libfluidsynth might work better:
+Spawning an instamce of fluidsynth CLI or binding to libfluidsynth might work better:
 
 https://fluid-dev.nongnu.narkive.com/ovSZ8tNW/how-to-send-manual-midi-commands-to-fluidsynth-from-another-program
